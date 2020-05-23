@@ -137,9 +137,9 @@ export default (props) => {
                 <P theme={{ ...p.skillsMainP }} style={{ fontWeight: "bold" }}> 個人作品</P>
                 <div style={{ height: "1rem" }} />
                 <Container theme={{ ...container.skillsCard }}>
-                    <WorksCard styles={{ height: "15rem" }} title={"店鋪形象網站"} href={"https://taiwanhua.github.io/ArhuaReactCourse"} text={"第一次替實體店鋪，建立形象網站，將所要的特色展現出來，是最具成就的事。"} />
+                    <WorksCard styles={{ height: "15rem" }} title={"店鋪形象網站"} href={"https://hairsalon-mam.herokuapp.com/"} text={"第一次替實體店鋪，建立形象網站，將所要的特色展現出來，是最具成就的事。"} />
                     <WorksCard styles={{ height: "15rem" }} title={"React教學網站"} href={"https://taiwanhua.github.io/ArhuaReactCourse"} text={"決定將自己的知識分享出去，豐富自己也幫助別人。"} />
-                    <WorksCard styles={{ height: "15rem" }} title={"個人印象網站"} href={""} text={"快速地替有需求的他打造一個簡單好看的個人網頁。"} />
+                    <WorksCard styles={{ height: "15rem" }} title={"個人印象網站"} href={"https://yaunwangpersonweb.herokuapp.com/"} text={"快速地替有需求的他打造一個簡單好看的個人網頁。"} />
                 </Container>
                 <div style={{ height: "1rem" }} />
             </SubContainer>
@@ -175,13 +175,15 @@ export default (props) => {
                 <Container theme={{ ...container.skillsCard, }} >
                     <ContactCard styles={{ height: "12rem" }} title={"聯絡方式"} href={"https://taiwanhua.github.io/ArhuaReactCourse"}>
                         <div style={{ height: "1rem" }}></div>
-                        <li style={{ marginBottom: "0.5rem" ,fontSize:"0.9rem"}}>
+                        <li style={{ marginBottom: "0.5rem", fontSize: "0.9rem" }}>
                             <img style={{
+                                height: "2rem", width: "2rem",
                                 position: "relative", top: "0.5rem", marginRight: "0.5rem"
                             }} src={line} alt={"line"} />
                                 ID : fansofcheer</li>
-                        <li style={{ marginBottom: "0.5rem" ,fontSize:"0.9rem"}}>
+                        <li style={{ marginBottom: "0.5rem", fontSize: "0.9rem" }}>
                             <img style={{
+                                 height: "2rem", width: "2rem",
                                 position: "relative", top: "0.5rem", marginRight: "0.5rem"
                             }} src={mobile} alt={"line"} />
                             手機 : 0987-837-233</li>
