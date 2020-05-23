@@ -24,7 +24,7 @@ export const Navbar = (props) => {
                 </SubContainer>
                 <SubContainer theme={{ ...subContainer.navbarButton }}>
                     <Link style={{ textDecoration: "none" }} to={"/Resume"}>
-                        <LineButton
+                        <LineButton onClick={() => { window.scrollTo(0, 0) }}
                             theme={{
                                 ...lineButton.navbarButton, ...(ScrollY > 50 ? {
                                     backgroundColor: (themeColors.aboutMeCardEnterBackgroundColor ?? themeColors.navbarScrollBackgroundColor),

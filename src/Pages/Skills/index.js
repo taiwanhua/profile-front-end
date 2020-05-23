@@ -1,5 +1,6 @@
 import React, { useContext, useReducer, useEffect, useState } from 'react';
 import { P } from '../../Components/Contents';
+import { Link } from 'react-router-dom';
 import { SubContainer, Container } from '../../Components/FlexContainers/Containers';
 import { Context } from '../../Store/store'
 import { LineButton } from '../../Components/Buttons'
@@ -15,35 +16,35 @@ export default (props) => {
     const { FlexContainers: { subContainer, container }, buttons: { lineButton }, contents: { p }, themeColors } = Theme;
 
 
-    useEffect(() => {
-        // /* 
-        //    Date   : 2020-05-21 01:16:39
-        //    Author : Arhua Ho
-        //    Content: 向下滾動超過1300時更換背景色，並適應移動端設備
-        // */
-        // if ((ScrollY > 1250 && ScrollY < 2061 && ScreenW > 425)) {
-        //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#e9967a" });
-        //     //window.scrollTo(0, 0)
-        // }
-        // else if (ScrollY > 500 && ScrollY < 931 && ScreenW < 426) {
-        //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#e9967a" });
-        // }
-        // /* 
-        //    Date   : 2020-05-21 14:20:04
-        //    Author : Arhua Ho
-        //    Content: 向下滾動超過1300時，(至What Can I do 區域時) 更換背景色，並適應移動端設備
-        // */
-        // else if (ScrollY > 2060 && ScreenW > 425) {
-        //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#c6c4b9" });
-        // }
-        // else if (ScrollY > 930 && ScreenW < 426) {
-        //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#c6c4b9" });
-        // }
-        // else {
-        //     setTheme({ type: "AboutMeCardEnterChange", changeColor: null });
-        // }
-        // console.log(ScrollY)
-    }, [ScreenW, ScrollY, setTheme])
+    // useEffect(() => {
+    // /* 
+    //    Date   : 2020-05-21 01:16:39
+    //    Author : Arhua Ho
+    //    Content: 向下滾動超過1300時更換背景色，並適應移動端設備
+    // */
+    // if ((ScrollY > 1250 && ScrollY < 2061 && ScreenW > 425)) {
+    //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#e9967a" });
+    //     //window.scrollTo(0, 0)
+    // }
+    // else if (ScrollY > 500 && ScrollY < 931 && ScreenW < 426) {
+    //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#e9967a" });
+    // }
+    // /* 
+    //    Date   : 2020-05-21 14:20:04
+    //    Author : Arhua Ho
+    //    Content: 向下滾動超過1300時，(至What Can I do 區域時) 更換背景色，並適應移動端設備
+    // */
+    // else if (ScrollY > 2060 && ScreenW > 425) {
+    //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#c6c4b9" });
+    // }
+    // else if (ScrollY > 930 && ScreenW < 426) {
+    //     setTheme({ type: "AboutMeCardEnterChange", changeColor: "#c6c4b9" });
+    // }
+    // else {
+    //     setTheme({ type: "AboutMeCardEnterChange", changeColor: null });
+    // }
+    // console.log(ScrollY)
+    // }, [ScreenW, ScrollY, setTheme])
 
     useEffect(() => {
         /* 
@@ -51,7 +52,8 @@ export default (props) => {
            Author : Arhua Ho
            Content: 滾動至頂部
         */
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        setTheme({ type: "AboutMeCardEnterChange", changeColor: null });
 
         return () => {
 
@@ -75,16 +77,18 @@ export default (props) => {
                             <br />
 
                         </P>
-                        <LineButton
-                            theme={{
-                                ...lineButton.SkillsButton, ...(ScrollY > 50 ? {
-                                    color: themeColors.navbarScrollColor,
-                                    border: `${themeColors.navbarScrollColor} solid 0.05rem`,
-                                    transBackgroundColor: themeColors.navbarScrollColor,
-                                    transColor: themeColors.navbarScrollBackgroundColor
-                                } : null),
+                        <Link to="/logo192.png" style={{ textDecoration: "none" }} target="_blank" download>
+                            <LineButton
+                                theme={{
+                                    ...lineButton.SkillsButton, ...(ScrollY > 50 ? {
+                                        color: themeColors.navbarScrollColor,
+                                        border: `${themeColors.navbarScrollColor} solid 0.05rem`,
+                                        transBackgroundColor: themeColors.navbarScrollColor,
+                                        transColor: themeColors.navbarScrollBackgroundColor
+                                    } : null),
 
-                            }}>Download Resume</LineButton>
+                                }}>Download Resume</LineButton>
+                        </Link>
                     </SubContainer>
                 </Container>
             </SubContainer>
@@ -110,13 +114,13 @@ export default (props) => {
                     ]}></SkillsCard>
                     <SkillsCard title={"MVC"} list={[
                         { "ASP.NET (.NET feamework)": [] },
-                        { ".NET Core MVC": [] },
+                        { ".NET Core MVC (C#)": [] },
                         { "Java Spring-boot & Thymeleaf": [] },
                     ]}></SkillsCard>
                 </Container>
                 <Container theme={{ ...container.skillsCard }}>
                     <SkillsCard title={"佈署 Deploy"} list={[
-                        { "雲端": [null, "Heroku", "Prisma Cloud", "GitHub Pages"] },
+                        { "雲端": [null, "Heroku (Docker)", "Prisma Cloud", "GitHub Pages"] },
                         { "自架伺服器": [null, "IIS", "Xampp (Apache)", "Git Server (以Apache搭配Git建立自己的Git Server)"] },
                     ]}></SkillsCard>
                     <SkillsCard title={"版控 / 其他技術"} list={[
@@ -183,7 +187,7 @@ export default (props) => {
                                 ID : fansofcheer</li>
                         <li style={{ marginBottom: "0.5rem", fontSize: "0.9rem" }}>
                             <img style={{
-                                 height: "2rem", width: "2rem",
+                                height: "2rem", width: "2rem",
                                 position: "relative", top: "0.5rem", marginRight: "0.5rem"
                             }} src={mobile} alt={"line"} />
                             手機 : 0987-837-233</li>

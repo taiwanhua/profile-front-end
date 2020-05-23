@@ -31,6 +31,14 @@ export const Container = styled.div.attrs((props) => ({}))`
     min-width: ${props => props?.theme?.minWidth ?? 'unset'};
     box-shadow: ${props => props?.theme?.boxShadow ?? 'unset'};
     margin-top: ${props => props?.theme?.marginTop ?? 'unset'};
+
+    @media (hover: none) {
+        background-attachment: initial;
+    }
+
+    @media (pointer: coarse) { 
+        background-attachment: initial;
+     }
     
 `
 
