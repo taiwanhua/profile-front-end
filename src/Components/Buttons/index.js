@@ -19,7 +19,7 @@ export const LineButton = styled.div.attrs((props) => ({
     line-height: ${props => props?.theme?.height ?? '2.2rem'};
     height:${props => props?.theme?.height ?? '2.2rem'};
     width:${props => props?.theme?.width ?? '6rem'};
-    font-family: ${props => props?.theme?.fontFamily ?? 'fantasy'};
+    font-family: ${props => props?.theme?.fontFamily ?? 'Impact'};
     padding: ${props => props?.theme?.padding ?? 'unset'}; 
     margin: ${props => props?.theme?.margin ?? 'unset'}; 
     transition: background-color 1s ease, color 1s ease, border 1s ease;

@@ -17,7 +17,7 @@ export const P = styled.p.attrs((props) => ({
     line-height: ${props => props?.theme?.height ?? '2.2rem'};
     height: ${props => props?.theme?.height ?? '2.2rem'};
     width: ${props => props?.theme?.width ?? 'unset'};
-    font-family: ${props => props?.theme?.fontFamily ?? 'fantasy'};
+    font-family: ${props => props?.theme?.fontFamily ?? 'Impact'};
     padding: ${props => props?.theme?.padding ?? 'unset'}; 
     transition: background-color 1s ease, color 1s ease;
     text-align: ${props => props?.theme?.textAlign ?? 'center'}; 
@@ -33,7 +33,7 @@ export const P = styled.p.attrs((props) => ({
         line-height: ${props => props?.theme?.mobileL?.height ? props.theme.mobileL.height : (props?.theme?.height ?? '2.2rem')};
         height: ${props => props?.theme?.mobileL?.height ? props.theme.mobileL.height : (props?.theme?.height ?? '2.2rem')};
         width: ${props => props?.theme?.mobileL?.width ? props.theme.mobileL.width : (props?.theme?.width ?? 'unset')};
-        font-family: ${props => props?.theme?.mobileL?.fontFamily ? props.theme.mobileL.fontFamily : (props?.theme?.fontFamily ?? 'fantasy')};
+        font-family: ${props => props?.theme?.mobileL?.fontFamily ? props.theme.mobileL.fontFamily : (props?.theme?.fontFamily ?? 'Impact')};
         padding: ${props => props?.theme?.mobileL?.padding ? props.theme.mobileL.padding : (props?.theme?.padding ?? 'unset')};
         transition: background-color 1s ease, color 1s ease;
         text-align: ${props => props?.theme?.mobileL?.textAlign ? props.theme.mobileL.textAlign : (props?.theme?.textAlign ?? 'center')};
@@ -46,7 +46,7 @@ export const P = styled.p.attrs((props) => ({
         line-height: ${props => props?.theme?.laptop?.height ? props.theme.laptop.height : (props?.theme?.height ?? '2.2rem')};
         height: ${props => props?.theme?.laptop?.height ? props.theme.laptop.height : (props?.theme?.height ?? '2.2rem')};
         width: ${props => props?.theme?.laptop?.width ? props.theme.laptop.width : (props?.theme?.width ?? 'unset')};
-        font-family: ${props => props?.theme?.laptop?.fontFamily ? props.theme.laptop.fontFamily : (props?.theme?.fontFamily ?? 'fantasy')};
+        font-family: ${props => props?.theme?.laptop?.fontFamily ? props.theme.laptop.fontFamily : (props?.theme?.fontFamily ?? 'Impact')};
         padding: ${props => props?.theme?.laptop?.padding ? props.theme.laptop.padding : (props?.theme?.padding ?? 'unset')};
         transition: background-color 1s ease, color 1s ease;
         text-align: ${props => props?.theme?.laptop?.textAlign ? props.theme.laptop.textAlign : (props?.theme?.textAlign ?? 'center')};
@@ -59,7 +59,7 @@ export const P = styled.p.attrs((props) => ({
         line-height: ${props => props?.theme?.mobileLSpin?.height ? props.theme.mobileLSpin.height : (props?.theme?.height ?? '2.2rem')};
         height: ${props => props?.theme?.mobileLSpin?.height ? props.theme.mobileLSpin.height : (props?.theme?.height ?? '2.2rem')};
         width: ${props => props?.theme?.mobileLSpin?.width ? props.theme.mobileLSpin.width : (props?.theme?.width ?? 'unset')};
-        font-family: ${props => props?.theme?.mobileLSpin?.fontFamily ? props.theme.mobileLSpin.fontFamily : (props?.theme?.fontFamily ?? 'fantasy')};
+        font-family: ${props => props?.theme?.mobileLSpin?.fontFamily ? props.theme.mobileLSpin.fontFamily : (props?.theme?.fontFamily ?? 'Impact')};
         padding: ${props => props?.theme?.mobileLSpin?.padding ? props.theme.mobileLSpin.padding : (props?.theme?.padding ?? 'unset')};
         transition: background-color 1s ease, color 1s ease;
         text-align: ${props => props?.theme?.mobileLSpin?.textAlign ? props.theme.mobileLSpin.textAlign : (props?.theme?.textAlign ?? 'center')};
