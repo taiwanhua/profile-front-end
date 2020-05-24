@@ -77,7 +77,7 @@ export default (props) => {
                             <br />
 
                         </P>
-                        <Link to="/logo192.png" style={{ textDecoration: "none" }} target="_blank" download>
+                        <Link to="/何家華_個人簡歷.pdf" style={{ textDecoration: "none" }} target="_blank" download>
                             <LineButton
                                 theme={{
                                     ...lineButton.SkillsButton, ...(ScrollY > 50 ? {
